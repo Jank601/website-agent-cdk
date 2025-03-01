@@ -56,7 +56,7 @@ class DataScraper(Construct):
             handler="web_crawler.lambda_handler",
             code=lambda_.Code.from_asset("src/lambda"),
             layers=[git_layer, python_layer],
-            timeout=Duration.seconds(60),
+            timeout=Duration.seconds(360),
             environment=lambda_env,
             memory_size=512
         )
